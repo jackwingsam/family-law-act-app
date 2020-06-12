@@ -414,7 +414,7 @@
     <section class="question">
       <div class="form-line">My name is </div>
       <div class="form-line">
-        <div id="sched1-name1" class="form-line-child underline"></div>
+        <div id="sched1-name1" class="form-line-child underline">{{ApplicantName}}</div>
         <div class="form-line-child hint">full name of party</div>
       </div>
       <div class="form-line">. </div>
@@ -424,27 +424,27 @@
 
       <table class="bordered border-rows">
         <tr >
-          <td>Full Name: {{X}} </td>
+          <td>Full Name: {{dateOfPO}} </td>
           <td></td>
-          <td>Date of Birth: {{X}}</td>
+          <td>Date of Birth: {{ApplicantDOB}}</td>
         </tr>
         <tr>
           <td colspan="3"><b>Contact information and address for delivery</b></td>
         </tr>
         <tr>
-          <td colspan="3">Lawyer (if applicable): {{X}} </td>
+          <td colspan="3">Lawyer (if applicable): {{LawyerContact}} </td>
         </tr>
         <tr>
-          <td colspan="3">Address: {{X}} </td>
+          <td colspan="3">Address: {{ApplicantAddress}} </td>
         </tr>
         <tr>
-          <td>City: {{X}} </td>
-          <td style="padding-left:50px">Province: {{X}} </td>
+          <td>City: {{ApplicantAddress}} </td>
+          <td style="padding-left:50px">Province: {{ApplicantAddress}} </td>
           <td>Postal Code: {{X}} </td>
         </tr>
         <tr>
           <td>Email: {{X}} </td>
-          <td colspan="2" style="padding-left:150px">Telephone: {{X}} </td>
+          <td colspan="2" style="padding-left:150px">Telephone: {{ApplicantAddress}} </td>
         </tr>
       </table>
 
@@ -455,22 +455,22 @@
 
     <!-- Question 2 -->
     <section class="question">
-      <span class="check"></span>
+      <span class="check">{{urgencyPOInfo}}</span>
       <span class="text-after-check">I understand I need to give notice to the person I want protection from, or who has made an application for protection from me. This person is the other party. To give notice, they must be served with the application and supporting materials at least 7 days before the date and time of the hearing unless the application is made without notice or with less then 7 days notice.</span>
       <div class="sub-selections">
         <div class="sub-selections-desc">
           Select only one of the options below
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{urgencyPOInfo}}</span>
           <span class="sub-selection-desc">I am making this application with at least 7 days notice to the other party.</span>
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{PORSpeedUp}}</span>
           <span class="sub-selection-desc">I am making this application without notice to the other party and I have completed an Application for Case Management Order Without Notice or Appearance requesting this application be heard without notice to the other party.</span>
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{PORSpeedUp}}</span>
           <span class="sub-selection-desc">I am making this application with less than 7 days notice to the other party and I have completed an Application for Case Management Order Without Notice or Appearance requesting this application be heard with less than 7 days notice to the other party.</span>
         </div>
       </div>
@@ -482,36 +482,36 @@
     <section class="question">
       <div class="form-line">The other party's name is </div>
       <div class="form-line">
-        <div id="sched1-other-name1" class="form-line-child underline"></div>
+        <div id="sched1-other-name1" class="form-line-child underline">{{x}}</div>
         <div class="form-line-child hint">full name of party</div>
       </div>
-      <div class="form-line" style="margin-bottom: 0.3rem">.</div>
+      <div class="form-line" style="margin-bottom: 0.3rem">{{x}}</div>
       <div class="form-line">Their contact information, as I know it, is:</div>
 
 
       <table class="bordered border-rows">
         <tr >
-          <td>Full Name: {{X}} </td>
+          <td>Full Name: {{RespondentName}} </td>
           <td></td>
-          <td>Date of Birth: {{X}}</td>
+          <td>Date of Birth: {{RespondentDOB}}</td>
         </tr>
         <tr>
-          <td colspan="3"><b>Contact information</b></td>
+          <td colspan="3"><b>Contact information</b>{{RespondentContact}}</td>
         </tr>
         <tr>
-          <td colspan="3">Lawyer (if applicable): {{X}} </td>
+          <td colspan="3">Lawyer (if applicable): {{RespondentContact}} </td>
         </tr>
         <tr>
-          <td colspan="3">Address: {{X}} </td>
+          <td colspan="3">Address: {{RespondentAddress}} </td>
         </tr>
         <tr>
-          <td>City: {{X}} </td>
-          <td style="padding-left:50px">Province: {{X}} </td>
-          <td>Postal Code: {{X}} </td>
+          <td>City: {{RespondentAddress}} </td>
+          <td style="padding-left:50px">Province: {{RespondentAddress}} </td>
+          <td>Postal Code: {{RespondentAddress}} </td>
         </tr>
         <tr>
-          <td>Email: {{X}} </td>
-          <td colspan="2" style="padding-left:150px">Telephone: {{X}} </td>
+          <td>Email: {{RespondentAddress}} </td>
+          <td colspan="2" style="padding-left:150px">Telephone: {{RespondentContact}} </td>
         </tr>
       </table>
 
@@ -526,17 +526,17 @@
           Select only one of the options below and complete the required schedule
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{orderType}}</span>
           <span class="sub-selection-desc">Protection order </span>
           <i>[Complete and attach Schedule 1]</i>
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{orderType}}</span>
           <span class="sub-selection-desc">Order to change an existing protection order </span>
           <i>[Complete and attach Schedule 2]</i>
         </div>
         <div class="sub-selection">
-          <span class="check"></span>
+          <span class="check">{{orderType}}</span>
           <span class="sub-selection-desc">Order to terminate and existing protection order </span>
           <i>[Complete and attach Schedule 3]</i>
         </div>
@@ -587,17 +587,17 @@
 
   <div class="form-line">I, </div>
   <div class="form-line">
-    <div id="sched1-name2" class="form-line-child underline"></div>
+    <div id="sched1-name2" class="form-line-child underline">{{ApplicantName}}</div>
     <div class="form-line-child hint">full name of party</div>
   </div>
   <div class="form-line">, </div>
   <div class="form-line">
-    <div id="sched1-occupation" class="form-line-child underline"></div>
+    <div id="sched1-occupation" class="form-line-child underline">{{ApplicantOccupation}}</div>
     <div class="form-line-child hint">occupation</div>
   </div>
   <div class="form-line"> of  </div>
   <div class="form-line">
-    <div id="sched1-address" class="form-line-child underline"></div>
+    <div id="sched1-address" class="form-line-child underline">{{ApplicantAddress}}</div>
     <div class="form-line-child hint">address of party, city, province</div>
   </div>
 
@@ -611,11 +611,11 @@
     </span>
     <div><i>Select and complete only those options that apply to your situation.</i></div>
     <div class="option">
-      <div class="check"></div>
+      <div class="check">{{ApplicantNeedsProtection}}</div>
       <div>Me</div>
     </div>
     <div class="option">
-      <div class="check"></div>
+      <div class="check">{{childPO}}</div>
       <div>the following child(ren) I am parent or guardian to:</div>
     </div>
 
@@ -661,7 +661,7 @@
 
     <div><i>Complete only if applicable. You may leave this section blank.</i></div>
     <div class="option" style="margin: 0 0 0.2rem 0;">
-      <div class="check"></div>
+      <div class="check">{{anotherAdultSharingResi }}</div>
       <div class="text-after-check italic">
         The following adult(s) sharing the residence with the other protected person(s):
       </div>
@@ -695,16 +695,16 @@
     <div><i>Complete only if applicable. You may leave this section blank.</i></div>
 
     <div class="form-line">
-      <div class="form-line-child check"></div>
+      <div class="form-line-child check">{{x}}</div>
     </div>
     <div class="form-line" style="margin: 0.5rem 0 0.5rem 0;"> Other (Specify): </div>
     <div class="form-line">
-      <div id="sched1-other-to-protect" class="form-line-child underline"></div>
+      <div id="sched1-other-to-protect" class="form-line-child underline">{{x}}</div>
       <div class="form-line-child hint">(full name of other person to be protected)</div>
     </div>
 
     <div><i>Describe why you are applying for the other person</i></div>
-    <div class="v-spacer-3"></div>
+    <div class="v-spacer-3">{{x}}</div>
 
     <div><b>
         The person(s) identified in the section above are referred to as the protected party/parties. The other party is the person they need protection from.
@@ -715,12 +715,12 @@
 
   <section class="question">
     There are existing written agreements or court orders about the children concerning parenting arrangments, child support, contact with a child, or guardianship
-    <span class="check"></span>
+    <span class="check">{{existingPOOrders}}</span>
     <span class="text-after-check" style="margin-left:17px;">Yes</span>
     <span class="check"></span>
     <span class="text-after-check" style="margin-left:17px;">No</span>
     <div><i>If yes, attach a copy of the order(s) and list them here:</i></div>
-    <div class="v-spacer-3"></div>
+    <div class="v-spacer-3">{{existingPOOrders}}</div>
   </section>
 
 
@@ -736,53 +736,53 @@
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">Residence</div>
     </div>
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">School</div>
     </div>
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">Place of Employment</div>
     </div>
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">Child care facility</div>
     </div>
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">Other (specify):</div>
-      <div class="form-line underline" style="min-width: 30rem;"></div>
+      <div class="form-line underline" style="min-width: 30rem;">{{RespondentNoGoPlaces}}</div>
     </div>
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNoGoPlaces}}</div>
       </div>
       <div class="form-line text-after-check">None of the above. I don't need an order restricting where the other party can go.</div>
     </div>
 
   </section>
 
-  <div class="v-spacer-1"></div>
+  <div class="v-spacer-1">{{x}}</div>
 
   <section class="question" style="margin-bottom:0.5rem"> <i>Complete only if applicable. You may leave this section blank:</i>
     <div>The protected party may need to communicate with the other party for the following reasons:</div>
-    <div><i>Select all options that apply</i></div>
+    <div><i>Select all options that apply</i>{{x}}</div>
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{x}}</div>
       </div>
       <div class="form-line text-after-check">Consensual dispute resolution</div>
     </div>
@@ -812,50 +812,50 @@
   <section class="question"> I have concerns the other party would cause harm with or threaten to use guns,
     <div>
       <span>explosives or another kind of firearms
-      <span class="check"></span>
+      <span class="check">{{RespondentFirearms}}</span>
       <span style="margin-left:18px;">Yes</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{RespondentFirearms}}</span>
       <span style="margin-left:22px;">No</span>
     </div>
-    <div><i>If yes, explain the reasons for your belief</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reasons for your belief</i>{{x}}</div>
+    <div class="v-spacer-3">{{x}}</div>
   </section>
 
   <section class="question"> I believe the other party owns or has access to guns, explosives or another kind of firearm
-    <span class="check"></span>
+    <span class="check">{{RespondentFirearmsYes}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{RespondentFirearmsYes}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, explain the reasons for your concerns</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reasons for your concerns</i>{{x}}</div>
+    <div class="v-spacer-3">{{x}}</div>
   </section>
 
   <section class="question"> I have concerns the other party would cause harm with or threaten to use a weapon that is not a gun or explosive
     <div style="margin-left:1rem">
-      <span class="check"></span>
+      <span class="check">{{RespondentWeapons}}</span>
       <span style="margin-left:18px;">Yes</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{RespondentWeapons}}</span>
       <span style="margin-left:22px;">No</span>
     </div>
-    <div><i>If yes, explain the reasons for your concerns</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reasons for your concerns</i>{{x}}</div>
+    <div class="v-spacer-3">{{x}}</div>
   </section>
 
 
   <section class="question"> I believe the other party owns a weapon that is not a gun or explosive 
-    <span class="check"></span>
+    <span class="check">{{RespondentWeaponsYes}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{RespondentWeaponsYes}}</span>
     <span style="margin-left:22px;">No</span>
     <div><i>Examples of weapons someone may own include swords, hunting knives, and nunchucks.</i></div>
-    <div><i>If yes, explain the reasons for your belief</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reasons for your belief</i>{{x}}</div>
+    <div class="v-spacer-3">{{x}}</div>
   </section>
 
   <section class="question" style="margin-bottom:0.5rem"> The protected party currently shares a home with the other party
-    <span class="check"></span>
+    <span class="check">{{RespondentLiveTogether}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{RespondentLiveTogether}}</span>
     <span style="margin-left:22px;">No</span>
   </section>
 
@@ -867,38 +867,38 @@
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNeedPolice}}</div>
       </div>
       <div class="form-line text-after-check">To remove the other party from the shared residence</div>
     </div>
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentHasStuffPolice}}</div>
       </div>
       <div class="form-line text-after-check">To supervise the removal of the protected party's personal belongings from the shared residence</div>
     </div>
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentNeedsStuffPolice}}</div>
       </div>
       <div class="form-line text-after-check">To supervise the removal of the other party's personal belongings from the shared residence</div>
     </div>
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{RespondentHasStuffPolice}}</div>
       </div>
       <div class="form-line text-after-check">To supervise the removal of the child(ren)'s personal belongings from a residence</div>
     </div>
 
     <div class="form-option">
       <div class="form-line">
-        <div class="form-line-child check"></div>
+        <div class="form-line-child check">{{x}}</div>
       </div>
       <div class="form-line text-after-check">Other (specify):</div>
-      <div class="form-line underline" style="min-width: 30rem;"></div>
+      <div class="form-line underline" style="min-width: 30rem;">{{x}}</div>
     </div>
 
   </section>
@@ -916,7 +916,7 @@
         Describe how the protected party/parties and the other part are related for the purposes of application
       </i>
     </div>
-    <div class="v-spacer-3"></div>
+        <div class="v-spacer-3">{{howPartiesRelated}}</div>
     <div>
       <i>
         If the protection order is only for the protection of a child(ren), please answer the following question for the parents or guardians of the child(ren).
@@ -928,22 +928,22 @@
   <section class="question"> The parties are or have been spouses (married or lived in a marriage-like relationship for at least 2 years)
     <span class="check"></span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{[werePOPartiesMarried}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, please complete all options below that apply to the parties</i></div>
+    <div><i>If yes, please complete all options below that apply to the parties</i>{{werePOPartiesMarried}]</div>
 
     <div class="form-line">Date on which the parties began to live together in a marriage-like relationship: </div>
     <div class="form-line">
-      <div id="sched1-name1" class="form-line-child underline" style="min-width: 12rem"></div>
+      <div id="sched1-name1" class="form-line-child underline" style="min-width: 12rem">{{liveTogetherPODate}}</div>
       <div class="form-line-child hint">date</div>
     </div>
     <div style="margin-top: 0.3rem">
       <span>Are the protected party and the other party currently separated</span>
-      <span class="check"></span>
+      <span class="check">{{isSeperatedPO}}</span>
       <span style="margin-left:18px;">Yes</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{isSeperatedPO}}</span>
       <span style="margin-left:22px;">No</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{isSeperatedPO}}</span>
       <span style="margin-left:22px;">Unknown</span>
     </div>
 
@@ -951,16 +951,16 @@
 
     <div class="form-line">If yes, the parties separated on</div>
     <div class="form-line">
-      <div id="sched1-name1" class="form-line-child underline" style="min-width: 12rem"></div>
+      <div id="sched1-name1" class="form-line-child underline" style="min-width: 12rem">{{separationDate}}</div>
       <div class="form-line-child hint">date of separation</div>
     </div>
     <div style="margin-top: 0.2rem">
       <span>If no, are the protected party and the other party planning to separate</span>
-      <span class="check"></span>
+      <span class="check">{{planningToSeparatePO}}</span>
       <span style="margin-left:18px;">Yes</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{planningToSeparatePO}}</span>
       <span style="margin-left:22px;">No</span>
-      <span style="margin-left:5px;" class="check"></span>
+      <span style="margin-left:5px;" class="check">{{planningToSeparatePO}}</span>
       <span style="margin-left:22px;">Unknown</span>
     </div>
 
@@ -969,62 +969,62 @@
 
 
   <section class="question"> I have concerns about the mental health of the protected party and/or the other party
-    <span class="check"></span>
+    <span class="check">{{mentalHealthConcernPO}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{mentalHealthConcernPO}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, explain the reasons for your concerns</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reasons for your concerns</i>{{explainReasonsPO}}</div>
+    <div class="v-spacer-3">{{explainReasonsPO}}</div>
   </section>
 
 
   <section class="question"> Are there circumstances that may increase the risk of family violence
-    <span class="check"></span>
+    <span class="check">{{riskOfViolencePO}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{riskOfViolencePO}}</span>
     <span style="margin-left:22px;">No</span>
     <div><i>If yes, describe the circumstances such as: substance abuse, employment or financial difficulties, relationship status, criminal his-tory, pregnancy, threats to you/another person/child/animal, stalking, forced sex, controlling behaviour, release from prison, stran-gling/choking/biting, threats or attempts to commit suicide, cultural religious beliefs or any other circumstances</i></div>
-    <div class="v-spacer-3"></div>
+    <div class="v-spacer-3">{{describeCirumstancesPO}}</div>
   </section>
 
 
 
   <section class="question"> There are existing court orders protecting one of the parties or restraining contact between the parties, including protection orders, peace bonds, restraining orders, bail conditions or other criminal orders
-    <span class="check"></span>
+    <span class="check">{{existingPOOrders}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{existingPOOrders}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, attach a copy of the order(s) and list them here:</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, attach a copy of the order(s) and list them here:</i>{{x}}</div>
+    <div class="v-spacer-3">{{x}}</div>
   </section>
 
 
   <section class="question"> Has the other party ever failed to obey a court order 
-    <span class="check"></span>
+    <span class="check">{{otherPartyDisobeyOrder}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{otherPartyDisobeyOrder}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, describe the circumstances:</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, describe the circumstances:</i>{{otherPartyDisobeyOrder}}</div>
+    <div class="v-spacer-3">{{otherPartyDisobeyOrder}}</div>
   </section>
 
 
   <section class="question"> I have concerns the other party may not obey a court order
-    <span class="check"></span>
+    <span class="check">{{concernForNotObeying}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{concernForNotObeying}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, explain the reason for your concerns:</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, explain the reason for your concerns:</i>{{explainReasonsForConcern}}</div>
+    <div class="v-spacer-3">{{explainReasonsForConcern}}</div>
   </section>
 
 
   <section class="question"> I have reported my safety concerns to the police
-    <span class="check"></span>
+    <span class="check">{{reportedConcernsToPolice}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{reportedConcernsToPolice}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, describe what action they have taken:</i></div>
+    <div><i>If yes, describe what action they have taken:</i>{{describeActionsByPolice}}</div>
   </section>
 
 
@@ -1034,12 +1034,12 @@
 
 
   <section class="question"> I have reported my safety concerns to a social worker (Ministry of Children and Family Development)
-    <span class="check"></span>
+    <span class="check">{{reportedConcernsToSW}}</span>
     <span style="margin-left:18px;">Yes</span>
-    <span style="margin-left:5px;" class="check"></span>
+    <span style="margin-left:5px;" class="check">{{reportedConcernsToSW}}</span>
     <span style="margin-left:22px;">No</span>
-    <div><i>If yes, describe what action they have taken:</i></div>
-    <div class="v-spacer-3"></div>
+    <div><i>If yes, describe what action they have taken:</i>{{desrcibeSWAction}}</div>
+    <div class="v-spacer-3">{{desrcibeSWAction}}</div>
   </section>
 
   <h4 style="margin-bottom: 0.3rem">YOUR STORY</h4>
@@ -1048,17 +1048,17 @@
   </div>
 
   <section class="question"> What family violence do you fear?
-    <div class="v-spacer-9"></div>
+  <div class="v-spacer-9">{{whatViolence}}</div>
   </section>
 
 
   <section class="question"> Why do you fear family violence is likely to happen?
-    <div class="v-spacer-9"></div>
+    <div class="v-spacer-9">{{whyViolence}}</div>
   </section>
 
 
   <section class="question"> What behaviour or threats concern you?
-    <div class="v-spacer-5"></div>
+    <div class="v-spacer-5">{{describeThreats}}</div>
   </section>
 
 
@@ -1080,7 +1080,7 @@
     </ul>
   </section>
 
-  <div style="min-height: 31rem"></div>
+  <div style="min-height: 31rem">{{recentIncidents}}</div>
 
 
   <div style="margin-bottom: 1rem">Sworn or affirmed before me</div>
